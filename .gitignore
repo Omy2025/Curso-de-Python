@@ -1,0 +1,8 @@
+# Python
+.vscode/
+__pycache__/
+*.pyc
+.venv/
+# Windows
+Thumbs.db
+*.zip
