@@ -1,0 +1,149 @@
+En CMD: 
+
+C:\Users\omar_ayala>cd /d "D:\omar_ayala\Documents\Curso de Python"
+
+D:\omar_ayala\Documents\Curso de Python>.\.venv\Scripts\activate
+
+(.venv) D:\omar_ayala\Documents\Curso de Python>python -m pip install --upgrade pip
+Requirement already satisfied: pip in d:\omar_ayala\documents\curso de python\.venv\lib\site-packages (24.0)
+Collecting pip
+  Downloading pip-25.2-py3-none-any.whl.metadata (4.7 kB)
+Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+   ---------------------------------------- 1.8/1.8 MB 1.8 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.0
+    Uninstalling pip-24.0:
+      Successfully uninstalled pip-24.0
+Successfully installed pip-25.2
+
+(.venv) D:\omar_ayala\Documents\Curso de Python>pip install pandas matplotlib flake8 black
+Collecting pandas
+  Downloading pandas-2.3.1-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting matplotlib
+  Downloading matplotlib-3.10.5-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Collecting flake8
+
+Continua la instalación en más líneas
+
+Al ser la versión portatil de Git se ejecuta de esta forma: 
+
+(.venv) D:\omar_ayala\Documents\Curso de Python>"D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in D:/omar_ayala/Documents/Curso de Python/.git/
+
+D:\omar_ayala\Documents\Curso de Python>"D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" config user.name  "Omar Ayala"
+
+D:\omar_ayala\Documents\Curso de Python>"D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" config user.email "tu_correo@ejemplo.com"
+
+D:\omar_ayala\Documents\Curso de Python>"D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" add fin_utils.py main_intereses.py reporte_*.py pipeline_organizar_y_reporte.py requirements.txt .gitignore README.md
+
+D:\omar_ayala\Documents\Curso de Python>"D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" commit -m "Primer commit: utilidades financieras y pipeline de organización"
+[master (root-commit) 4334cc6] Primer commit: utilidades financieras y pipeline de organización
+ 8 files changed, 145 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 fin_utils.py
+ create mode 100644 main_intereses.py
+ create mode 100644 pipeline_organizar_y_reporte.py
+ create mode 100644 reporte_csv.py
+ create mode 100644 reporte_ventas.py
+ create mode 100644 requirements.txt
+
+
+C:\Users\omar_ayala>cd \d "D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" remote add origin https://github.com/Omy2025/Curso-de-Python
+El nombre de archivo, el nombre de directorio o la sintaxis de la etiqueta del volumen no son correctos.
+C:\Users\omar_ayala>cd /d "D:\omar_ayala\Documents\Curso de Python"
+
+D:\omar_ayala\Documents\Curso de Python>"D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" remote add origin https://github.com/Omy2025/Curso-de-Python
+
+D:\omar_ayala\Documents\Curso de Python>"D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" branch -M main
+
+D:\omar_ayala\Documents\Curso de Python>"D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" push -u origin main
+
+
+se activo el entorno virtual:
+
+D:\omar_ayala\Documents\Curso de Python>.\.venv\Scripts\activate
+
+(.venv) D:\omar_ayala\Documents\Curso de Python>pip install flake8
+Requirement already satisfied: flake8 in d:\omar_ayala\documents\curso de python\.venv\lib\site-packages (7.3.0)
+Requirement already satisfied: mccabe<0.8.0,>=0.7.0 in d:\omar_ayala\documents\curso de python\.venv\lib\site-packages (from flake8) (0.7.0)
+Requirement already satisfied: pycodestyle<2.15.0,>=2.14.0 in d:\omar_ayala\documents\curso de python\.venv\lib\site-packages (from flake8) (2.14.0)
+Requirement already satisfied: pyflakes<3.5.0,>=3.4.0 in d:\omar_ayala\documents\curso de python\.venv\lib\site-packages (from flake8) (3.4.0)
+
+(.venv) D:\omar_ayala\Documents\Curso de Python>
+
+Me quede en lo siguiente. (Se tiene que activra el entorno virtual para llegar allí (.venv))
+
+(.venv) D:\omar_ayala\Documents\Curso de Python>flake8 --max-line-length=100 .
+multiprocessing.pool.RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "D:\omar_ayala\Documents\Python Portatil\WPy64-31241\python-3.12.4.amd64\Lib\multiprocessing\pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\checker.py", line 82, in _mp_run
+    ).run_checks()
+      ^^^^^^^^^^^^
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\checker.py", line 527, in run_checks
+    self.process_tokens()
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\checker.py", line 512, in process_tokens
+    self.handle_newline(token_type)
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\checker.py", line 542, in handle_newline
+    self.run_logical_checks()
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\checker.py", line 439, in run_logical_checks
+    comments, logical_line, mapping = self.processor.build_logical_line()
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\processor.py", line 244, in build_logical_line
+    comments, logical, mapping_list = self.build_logical_line_tokens()
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\processor.py", line 225, in build_logical_line_tokens
+    previous_text = self.lines[row_index][column_index]
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+IndexError: string index out of range
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Scripts\flake8.exe\__main__.py", line 6, in <module>
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\main\cli.py", line 23, in main
+    app.run(argv)
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\main\application.py", line 198, in run
+    self._run(argv)
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\main\application.py", line 187, in _run
+    self.run_checks()
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\main\application.py", line 103, in run_checks
+    self.file_checker_manager.run()
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\checker.py", line 235, in run
+    self.run_parallel()
+  File "D:\omar_ayala\Documents\Curso de Python\.venv\Lib\site-packages\flake8\checker.py", line 204, in run_parallel
+    self.results = list(pool.imap_unordered(_mp_run, self.filenames))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\omar_ayala\Documents\Python Portatil\WPy64-31241\python-3.12.4.amd64\Lib\multiprocessing\pool.py", line 873, in next
+    raise value
+IndexError: string index out of range
+
+(.venv) D:\omar_ayala\Documents\Curso de Python>
+
+
+
+
+
+
+
+

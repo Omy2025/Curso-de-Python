@@ -1,0 +1,164 @@
+
+>>> print(7 / 2)
+3.5
+>>> print(7 // 2)
+3
+>>> print(7 % 2)
+1
+>>> print(2 ** 3)
+8
+>>> a, b = 10, 3
+>>> print(a > b and b > 0)
+True
+>>> print(a < b or b > 0)
+True
+>>> print(not(a == 10))
+False
+>>>
+
+
+>>> precio = 19.99
+>>> cantidad = 7
+>>> total_bruto = precio * cantidad
+>>> iva = total_bruto * 0.16
+>>> total_neto = total_bruto + iva
+>>> print(f"total_bruto:{total_bruto:-2f}")
+total_bruto:139.930000
+>>> print(f"iva:{iva:-2f}")
+iva:22.388800
+>>> print(f"total_neto:{total_neto:-2f}")
+total_neto:162.318800
+>>>
+
+Ejercicio 2:
+
+>>> monto=input("Introduce un monto: ")
+Introduce un monto: 1500
+>>> monto_n=float(monto)
+>>> monto_limite=1000
+>>> if monto_n<monto_limite:
+...     print("es menor que 1000")
+... else:
+...     print("no es menor que 1000")
+...
+no es menor que 1000
+>>> monto_string=input("Introduce un monto: ")
+Introduce un monto: 5500
+>>> monto=float(monto_string)
+>>> if monto>=1000 and monto <=10000:
+...     print(f"el monto {monto} si esta entre 1000 y 10000")
+...
+el monto 5500.0 si esta entre 1000 y 10000
+
+>>> monto_string=input("Introduce un monto: ")
+Introduce un monto: 15000
+>>> monto=float(monto_string)
+>>> if monto>=10000
+  File "<python-input-37>", line 1
+    if monto>=10000
+                   ^
+SyntaxError: expected ':'
+>>> if monto>=10000:
+...     print(f"el monto {monto} es mayor que 10000")
+...
+el monto 15000.0 es mayor que 10000
+>>>
+
+Ejercicio 3:
+
+>>> tiene_rfc_str=input("¿tiene RFC? (s/n): ").lower()
+¿tiene RFC? (s/n): s
+>>> tiene_historial_str=input("¿tiene historial crediticio? (s/n): ").lower()
+¿tiene historial crediticio? (s/n): s
+>>> tiene_rfc=(tiene_rfc_str=='s')
+>>> tiene_historial=(tiene_historial_str=='s')
+>>> califica=tiene_rfc and tiene_historial
+>>> requiere_revision_manual = not califica
+>>> if califica
+  File "<python-input-46>", line 1
+    if califica
+               ^
+SyntaxError: expected ':'
+>>> if califica:
+...     print("Califica (Tiene RFC e historial crediticio)")
+... else:
+...     print("No califica")
+... if requiere_revision_manual:
+...     print("requiere revisión manual")
+... else:
+...     print("no requiere revisión manual")
+...
+Califica (Tiene RFC e historial crediticio)
+no requiere revisión manual
+>>>
+
+Ejercicio 4
+
+>>> while True:
+...     numero_str = input("Por favor, ingresa un número entero: ")
+...     try:
+...         numero=int(numero_str)
+...         break
+...     except ValueError:
+...         print("ingresa un número valido")
+... if numero % 2 ==0:
+...     print(f"el número {numero} es par")
+... else:
+...     print(f"el número {numero} es impar")
+... es_multiplo_de_3=(numero % 3 ==0)
+... es_multiplo_de_5=(numero % 5 ==0)
+... if es_multiplo_de_3 and es_multiplo_de_5:
+...     print(f"el número {numero} es multiplo de 3 y 5")
+... elif es_multiplo_de_3:
+...     print(f"es multiplo de 3 pero no de 5")
+... elif es_multiplo_de_5:
+...     print(f"es multiplo de 5 pero no de 3")
+... else:
+...     print(f"no es multiplo de 3 ni de 5")
+...
+Por favor, ingresa un número entero: 115
+el número 115 es impar
+es multiplo de 5 pero no de 3
+>>>
+
+Ejercicio 5
+
+monto_str = input("Por favor, ingresa un monto: ")
+monto=float(monto_str)
+
+tasa_anual_pct_str = input("Por favor, ingresa una tasa anual: ")
+tasa_anual_pct=float(tasa_anual_pct_str)
+
+n_dias_str = input("Por favor, el número de días: ")
+n_dias=int(n_dias_str)
+
+
+>>> monto_str = input("Por favor, ingresa un monto: ")
+Por favor, ingresa un monto: 100
+>>>
+>>> n_dias_str = input("Por favor, el número de días: ")
+Por favor, el número de días: 20
+>>> monto=float(monto_str)
+>>> tasa_anual_pct=float(tasa_anual_pct_str)
+>>> n_dias=int(n_dias_str)
+>>> tasa_anual_pct_str = input("Por favor, ingresa una tasa anual: ")
+Por favor, ingresa una tasa anual: 8
+
+
+>>> def tasa_diaria(tasa_anual_pct):
+...     return (1 + tasa_anual_pct / 100) ** (1/365) - 1
+...
+>>> interes_comp = monto * ((1 + tasa_diaria(t) ) ** n_dias - 1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 't' is not defined
+>>> interes_comp = monto * ((1 + tasa_diaria(8) ) ** n_dias - 1)
+>>> interes_lin  = monto * (8 / 100) * n_dias / 365
+>>> print(f"interes compuesto:{interes_comp:.4f}")
+interes compuesto:0.4226
+>>> print(f"interes lineal:{interes_lin:.4f}")
+interes lineal:0.4384
+>>> diferencia_absoluta = abs(interes_comp - interes_lin)
+>>> print(f"La diferencia absoluta es: {diferencia_absoluta:.4f}")
+La diferencia absoluta es: 0.0158
+>>>

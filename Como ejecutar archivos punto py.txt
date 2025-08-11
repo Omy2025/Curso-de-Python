@@ -1,0 +1,21 @@
+Ejercicio 4 del día 4
+
+
+Así debe quedar la ruta:
+
+E:\Python Portatil\WPy64-31241\scripts>"E:\Python Portatil\WPy64-31241\python-3.12.4.amd64\python.exe" "D:\omar_ayala\Documents\Curso de Python\main_intereses.py"
+Interés simple   : 43.8356
+Interés compuesto: 42.2595
+Diferencia       : 1.5761
+
+E:\Python Portatil\WPy64-31241\scripts>
+
+Se debe poner la ruta de python.exe (qué es el que ejecuta y del archivo .py)
+
+Hay que:
+
+Arrastar la carpeta WPy64-31241\python-3.12.4.amd64 a la ventana DOS
+
+Hay que evitar dobles comillas y teclerar python.exe y añadir un espacio entre los dos bloques. 
+
+ Arrastar el archivo fin_utils.py a la la ventana DOS

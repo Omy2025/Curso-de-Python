@@ -1,0 +1,50 @@
+>>>     print("No es un entero positivo válido")
+  File "<stdin>", line 1
+    print("No es un entero positivo válido")
+IndentationError: unexpected indent
+>>> valor = input("Dame un entero positivo: ")
+Dame un entero positivo: 7
+>>>
+>>>
+>>> try:
+...     n = int(valor)
+...     if n > 0:
+...         print("OK, n =", n)
+...     else:
+...         print("No es un entero positivo.")
+... except ValueError:
+...     print("No es un entero positivo.")
+... >>> valor = input("Dame un entero positivo: ")
+  File "<stdin>", line 9
+    >>> valor = input("Dame un entero positivo: ")
+    ^^
+SyntaxError: invalid syntax
+>>>  valor = input("Dame un entero positivo: ")
+  File "<stdin>", line 1
+    valor = input("Dame un entero positivo: ")
+IndentationError: unexpected indent
+>>> valor = input("Dame un entero positivo: ")
+Dame un entero positivo: 7
+>>> try:
+...     n = int(valor)
+...     if n > 0:
+...         print("OK, n =", n)
+...     else:
+...         print("No es un entero positivo.")
+... except ValueError:
+...     print("No es un entero positivo.")
+...
+OK, n = 7
+>>> ventas = [100, 250.5, 0, 99, 300]
+>>> Total = sum(ventas)
+>>> print(f"La suma es: {Total}")
+La suma es: 749.5
+>>> n=len(ventas)
+>>> promedio=total/n
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'total' is not defined. Did you mean: 'Total'?
+>>> promedio=Total/n
+>>> print(f"el promedio es: {promedio}")
+el promedio es: 149.9
+>>>

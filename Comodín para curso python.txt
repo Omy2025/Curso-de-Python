@@ -1,0 +1,109 @@
+texto = input("Monto (puede tener decimales): ")
+try:
+    monto = float(texto)
+    if monto <= 0:
+        print("Debe ser positivo.")
+    else:
+        print("Correcto, monto =", monto)
+except ValueError:
+    print("Entrada inválida, no es número.")
+
+
+
+texto = input("Dame un entero positivo: ")
+try:
+    monto = float(texto)
+    if n=int(valor)
+        print("ok, n=",n)
+    else:
+        print("Correcto, monto =", monto)
+except ValueError:
+    print("No es un entero positivo válido")
+
+
+try:
+    n = int(valor)
+    if n > 0:
+        print("OK, n =", n)
+    else:
+        print("No es un entero positivo.")
+except ValueError:
+    print("No es un entero positivo.")
+
+
+esá biern
+
+>>> valor = input("Dame un entero positivo: ")
+Dame un entero positivo: 5
+>>> if valor.isdigit():
+...     n = int(valor)
+...     print("OK, n =", n)
+... else:
+...     print("No es un entero positivo válido")
+...
+OK, n = 5
+
+    valor = input("Dame un entero positivo: ")
+IndentationError: unexpected indent
+>>> valor = input("Dame un entero positivo: ")
+Dame un entero positivo: 7
+>>> try:
+...     n = int(valor)
+...     if n > 0:
+...         print("OK, n =", n)
+...     else:
+...         print("No es un entero positivo.")
+... except ValueError:
+...     print("No es un entero positivo.")
+...
+OK, n = 7
+>>>
+
+ventas = [100, 250.5, 0, 99, 300]
+Total = sum(ventas)
+print(f"La suma es: {Total}")
+
+
+
+
+>>> n=len(ventas)
+>>> media=Total/n
+>>> print(f"El promedio es: {media}")
+El promedio es: 149.9
+
+
+Día 4, se pega el código:
+
+def interes_simple(monto: float, tasa_anual_pct: float, dias: int) -> float:
+    """
+    Calcula interés simple: monto * (tasa/100) * (dias/365).
+    Requiere monto>0, tasa>=0, dias>0.
+    """
+    if monto <= 0 or tasa_anual_pct < 0 or dias <= 0:
+        raise ValueError("monto>0, tasa>=0 y dias>0 son requeridos.")
+    return monto * (tasa_anual_pct / 100) * (dias / 365)
+
+# Prueba rápida
+print(f"{interes_simple(10000, 12.5, 30):.4f}")
+
+def tasa_diaria(tasa_anual_pct: float) -> float:
+    """Convierte tasa anual % a tasa diaria (fracción)."""
+    if tasa_anual_pct < 0:
+        raise ValueError("La tasa no puede ser negativa.")
+    return (1 + tasa_anual_pct / 100) ** (1/365) - 1
+
+def interes_compuesto_diario(monto: float, tasa_anual_pct: float, dias: int) -> float:
+    """Interés con composición diaria."""
+    if monto <= 0 or dias <= 0:
+        raise ValueError("monto>0 y dias>0.")
+    return monto * ((1 + tasa_diaria(tasa_anual_pct)) ** dias - 1)
+
+def comparar_lineal_vs_compuesto(monto: float, tasa_anual_pct: float, dias: int):
+    """Devuelve (interes_lineal, interes_compuesto, diferencia_abs)."""
+    lin = interes_simple(monto, tasa_anual_pct, dias)
+    comp = interes_compuesto_diario(monto, tasa_anual_pct, dias)
+    return lin, comp, abs(lin - comp)
+
+# Prueba
+lin, comp, diff = comparar_lineal_vs_compuesto(10000, 8, 20)
+print(f"Lineal: {lin:.4f} | Compuesto: {comp:.4f} | Dif: {diff:.4f}")
