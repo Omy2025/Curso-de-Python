@@ -6,3 +6,21 @@ __pycache__/
 # Windows
 Thumbs.db
 *.zip
+
+# Entornos y herramientas
+.venv/
+PortableGit/
+WPy*/              # WinPython portátil
+__pycache__/
+*.pyc
+
+# Binarios grandes
+*.exe
+*.msi
+*.7z
+*.zip
+
+# Salidas y datos derivados
+salidas/
+ordenados/
+entrada/
