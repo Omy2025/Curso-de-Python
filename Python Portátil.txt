@@ -1,0 +1,12 @@
+Usar el siguiente comando para ir a la ruta del proyecto:
+cd /d "D:\omar_ayala\Documents\Curso de Python"
+
+Usar git.exe:
+
+D:\omar_ayala\Documents\Curso de Python>"D:\omar_ayala\Documents\Curso de Python\PortableGit\bin\git.exe" nombre del comando
+
+Ejecutar una instalación con pip install:
+
+Navegó a la carpeta del curso y:
+
+"D:\omar_ayala\Documents\Python Portatil\WPy64-31241\python-3.12.4.amd64\python.exe" -m pip install nombre de la instalación
