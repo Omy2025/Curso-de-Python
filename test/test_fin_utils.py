@@ -1,5 +1,8 @@
 import math
 import pytest
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fin_utils import (
     interes_simple, tasa_diaria,
     interes_compuesto_diario, comparar_lineal_vs_compuesto
